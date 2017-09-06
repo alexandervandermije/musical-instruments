@@ -6,7 +6,23 @@ gameApp.controller('MainController', function MainController($scope, $http) {
 		{name: 'trumpet', sound: 'empty', img: 'empty'},
 		{name: 'cello', sound: 'empty', img: 'empty'},
 		{name: 'violin', sound: 'empty', img: 'empty'},
-		{name: 'bass guitar', sound: 'empty', img: 'empty'}
+		{name: 'bass guitar', sound: 'empty', img: 'empty'},
+		{name: 'guitar', sound: 'empty', img: 'empty'}
 	]
-	console.log($scope.allInstruments);
+	$scope.currentRound = [];
+	function generateRan(){
+	    var max = $scope.allInstruments.length;
+	    var random = [];
+	    for(var i = 0;i<4 ; i++){
+	        var temp = Math.floor(Math.random()*max);
+	        if(random.indexOf(temp) == -1){
+	            random.push(temp);
+	            $scope.currentRound.push($scope.allInstruments[temp])
+	        }
+	        else
+	         i--;
+	    }
+	    console.log($scope.currentRound);
+	}
+	generateRan();
 });
