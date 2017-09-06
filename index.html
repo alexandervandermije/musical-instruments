@@ -23,9 +23,11 @@
     </head>
     <body>
         <div class="container" ng-app="gameApp" ng-controller="MainController">
-        
-
-
+            <div class="row">
+                <div ng-repeat="instrument in currentRound" class="col-sm-3">
+                {{instrument.name}}
+                </div>
+            </div>
 
         </div>
 

@@ -10,7 +10,8 @@ gameApp.controller('MainController', function MainController($scope, $http) {
 		{name: 'guitar', sound: 'empty', img: 'empty'}
 	]
 	$scope.currentRound = [];
-	function generateRan(){
+	
+	function generateRound(){
 	    var max = $scope.allInstruments.length;
 	    var random = [];
 	    for(var i = 0;i<4 ; i++){
@@ -24,5 +25,5 @@ gameApp.controller('MainController', function MainController($scope, $http) {
 	    }
 	    console.log($scope.currentRound);
 	}
-	generateRan();
+	generateRound();
 });
