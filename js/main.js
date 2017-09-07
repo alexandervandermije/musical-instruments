@@ -9,8 +9,11 @@ gameApp.controller('MainController', function MainController($scope, $http) {
 		{name: 'bass guitar', sound: 'empty', img: 'bassguitar.png'},
 		{name: 'electric guitar', sound: 'empty', img: 'electricGuitar.png'}
 	]
-	$scope.instrumentsCurrentRound = [];
 	
+	$scope.instrumentsCurrentRound = [];
+	$scope.amountTried = 0;
+	$scope.score = 0;
+
 	function generateRound(){
 	    var max = $scope.allInstruments.length;
 	    var random = [];
@@ -27,4 +30,19 @@ gameApp.controller('MainController', function MainController($scope, $http) {
 	    $scope.correctInstrument = $scope.instrumentsCurrentRound[Math.floor(Math.random() * $scope.instrumentsCurrentRound.length)];
 	}
 	generateRound();
+
+	$scope.checkAnswer = function()
+	{
+		console.log(this.instrument.name);
+		if(this.instrument.name == $scope.correctInstrument.name)
+		{
+			console.log('correct');
+		}
+		else
+		{
+			$scope.amountTried +=1 ;
+			console.log($scope.amountTried);
+		}
+
+	}
 });
