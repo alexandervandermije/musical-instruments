@@ -2,12 +2,12 @@ var gameApp = angular.module('gameApp', []);
 gameApp.controller('MainController', function MainController($scope, $http) {
 
 	$scope.allInstruments = [
-		{name: 'drums', sound: 'empty', img: 'empty'},
-		{name: 'trumpet', sound: 'empty', img: 'empty'},
-		{name: 'cello', sound: 'empty', img: 'empty'},
-		{name: 'violin', sound: 'empty', img: 'empty'},
-		{name: 'bass guitar', sound: 'empty', img: 'empty'},
-		{name: 'guitar', sound: 'empty', img: 'empty'}
+		{name: 'drums', sound: 'empty', img: 'drums.jpg'},
+		{name: 'trumpet', sound: 'empty', img: 'trumpet.jpg'},
+		{name: 'cello', sound: 'empty', img: 'cello.png'},
+		{name: 'violin', sound: 'empty', img: 'violin.jpg'},
+		{name: 'bass guitar', sound: 'empty', img: 'bassguitar.png'},
+		{name: 'electric guitar', sound: 'empty', img: 'electricGuitar.png'}
 	]
 	$scope.currentRound = [];
 	
