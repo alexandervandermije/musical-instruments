@@ -29,13 +29,14 @@
     <body>
         <div class="container" ng-app="gameApp" ng-controller="MainController">
             <div class="row">
-                <div ng-repeat="instrument in currentRound" class="col-sm-3 instrument">
+                <div ng-repeat="instrument in instrumentsCurrentRound" class="col-sm-3 instrument">
                     <img class="instrumentImg" ng-src="img/instruments/{{instrument.img}}"/>
                     {{instrument.name}}
                 </div>
             </div>
             <div class="row">
-                <button class="btn">Speel de muziek!</button>
+                <button class="btn btn-success">Speel de muziek!</button>
+
             </div>
 
         </div>

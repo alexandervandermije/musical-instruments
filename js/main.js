@@ -9,7 +9,7 @@ gameApp.controller('MainController', function MainController($scope, $http) {
 		{name: 'bass guitar', sound: 'empty', img: 'bassguitar.png'},
 		{name: 'electric guitar', sound: 'empty', img: 'electricGuitar.png'}
 	]
-	$scope.currentRound = [];
+	$scope.instrumentsCurrentRound = [];
 	
 	function generateRound(){
 	    var max = $scope.allInstruments.length;
@@ -18,12 +18,13 @@ gameApp.controller('MainController', function MainController($scope, $http) {
 	        var temp = Math.floor(Math.random()*max);
 	        if(random.indexOf(temp) == -1){
 	            random.push(temp);
-	            $scope.currentRound.push($scope.allInstruments[temp])
+	            $scope.instrumentsCurrentRound.push($scope.allInstruments[temp])
 	        }
 	        else
 	         i--;
 	    }
-	    console.log($scope.currentRound);
+	    console.log($scope.instrumentsCurrentRound);
+	    $scope.correctInstrument = $scope.instrumentsCurrentRound[Math.floor(Math.random() * $scope.instrumentsCurrentRound.length)];
 	}
 	generateRound();
 });
