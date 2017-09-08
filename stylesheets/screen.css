@@ -74,3 +74,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   height: 150px;
   margin-left: 30%;
 }
+
+/* line 13, ../sass/screen.scss */
+#correctInstrument {
+  text-align: center;
+}
+/* line 16, ../sass/screen.scss */
+#correctInstrument #correctInstrumentImg {
+  display: block;
+  width: 100%;
+}
